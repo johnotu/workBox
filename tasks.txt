@@ -10,3 +10,5 @@
 	- advanced calculator
 	- matrices and equations
 	- charts and graphs
+
+* design logo for workBox
