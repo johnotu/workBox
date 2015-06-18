@@ -1,0 +1,12 @@
+* roundup answers to numlimit set.
+
+* html/javascript top navigation bar to display:
+	- workBox (left aligned)
+	- Team (right aligned)
+	- Help -ditto-
+
+* html/jss side navigation bar to display:
+	- basic calculator
+	- advanced calculator
+	- matrices and equations
+	- charts and graphs
