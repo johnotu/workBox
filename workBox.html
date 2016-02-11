@@ -8,49 +8,53 @@
 		<script src="workBox.js"></script>
 	</head>
 	<body>
-		<div class="topnav">
-			<a class="topnav-left" href="#"><img src="" alt="logo-place-holder"> | workBox</a>
-			<a class="topnav-right" href="#">Help</a>
-			<a class="topnav-right" href="#">Differentiation/Integration</a>
-			<a class="topnav-right" href="#">Equations/Matrices</a>
-			<a class="topnav-right" href="#">Charts/Graphs</a>
-			<a class="topnav-right" href="#">AdvancedCalculator</a>
-			<a class="topnav-right" href="#">BasicCalculator</a>
-			
-		</div>
-		
-
-		<div id="calculator">
-			<div id="inline"></div>
-			<div id="total">
-			</div>
-			<div id="operators">
-				<a id="add">+</a>
-				<a id="sub">-</a>
-				<a id="div">/</a>
-				<a id="mult">*</a>
-				<a id="compute">=</a>
-			</div>
-			<div id="numbers">
-				<a id="one">1</a>
-				<a id="two">2</a>
-				<a id="three">3</a>
-				<a id="four">4</a>
-				<a id="five">5</a>
-				<a id="six">6</a>
-				<a id="seven">7</a>
-				<a id="eight">8</a>
-				<a id="nine">9</a>
-				<a id="clear">C</a>
-				<a id="zero">0</a>
-				<a id="deci">.</a>
-			</div>
-		</div>
-		<div class="debug">
-			<div id="debug-display1"></div>
-			<div id="debug-display2"></div>
-			<div id="debug-display3"></div>
-			<div id="debug-display4"></div>
-		</div>
+	  <div class="site-wrapper">
+	    <div class="site-wrapper-inner">
+	      <div class="cover-container">
+	        <div class="masthead clearfix">
+	          <div class="inner">
+	            <h3 class="masthead-brand">simpleCalc</h3>
+	          </div>
+	        </div>
+	        <div class="inner cover">
+	          <table class="table table-bordered table-condensed">
+	            <tr>
+	              <th id="total" class="display" colspan="4"></th>
+	            </tr>
+	            <tr>
+	              <td class="numbers"><a href="#" id="one" style="text-decoration: none;">1</a></td>
+	              <td class="numbers"><a href="#" id="two" style="text-decoration: none;">2</a></td>
+	              <td class="numbers"><a href="#" id="three" style="text-decoration: none;">3</a></td>
+	              <td class="operators"><a href="#" id="div" style="text-decoration: none;">/</a></td>
+	            </tr>
+	            <tr>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">4</a></td>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">5</a></td>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">6</a></td>
+	              <td class="operators"><a href="#" id="mult" style="text-decoration: none;">*</a></td>
+	            </tr>
+	            <tr>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">7</a></td>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">8</a></td>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">9</a></td>
+	              <td class="operators"><a href="#" id="add" style="text-decoration: none;">+</a></td>
+	            </tr>
+	            <tr>
+	              <td><a href="#" id="clear" style="text-decoration: none;">C</a></td>
+	              <td class="numbers"><a href="#" id="number" style="text-decoration: none;">0</a></td>
+	              <td><a href="#" id="deci" style="text-decoration: none;">.</a></td>
+	              <td><a href="#" id="compute" style="text-decoration: none;">=</a></td>
+	            </tr>
+	          </table>
+	        </div>
+	        
+	        <div class="mastfoot">
+	          <div class="inner">
+	            <p>A simple javaScript calculator by <a href="http://www.freecodecamp.com/johnotu">John Otu</a> | <a href="https://twitter.com/john_otu">@john_otu</a> using <a href="https://github.com/josdejong">Jose de Jong's</a> <a href="http://mathjs.org"> math.js</a>, <a href="https://jquery.com/"> jQuery</a> and <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</body>
 </html>
