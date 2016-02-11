@@ -1,96 +1,48 @@
 $(document).ready(function(){
 	var num = "";
-	var firstnum = "";
-	var op = "";
 	var dispAr = [];
-	var total = $("#total");
+	var total = $(".display");
+	$(total).text("0");
 
-	$("#total").text("0");
-
-	$("#numbers a").not("#clear,#deci").click(function(){
+	$(".numbers").click(function(){
 		num += $(this).text();
 		dispAr.push($(this).text());
-		$("#inline").text(dispAr.join(""));
-		numlimit();
+		$(total).text(dispAr.join(""));
 	});
-
-	$("#operators a").not("#compute").click(function(){
+	
+	$(".operators").click(function(){
+		num += $(this).text;
 		dispAr.push($(this).text());
-		$("#inline").text(dispAr.join(""));
-		op = $(this).text();
-		firstnum = num;
-		num = "";
+		$(total).text(dispAr.join(""));
 	});
 
 	$("#deci").click(function(){
 		var numdeci = 0;
 		for(i=0; i<num.length; i++) {
-			numdeci++
+			numdeci++;
 		}
 		if(numdeci>0) {
 			num += $(this).text();
 			dispAr.push($(this).text());
-			$("#inline").text(dispAr.join(""));
-			numlimit();
+			$(total).text(dispAr.join(""));
 		}
 		else {
 			num += "0.";
 			dispAr.push("0.");
-			$("#inline").text(dispAr.join(""));
-		};
-    });
-
-	$("#compute").click(function(){
-		$("#debug-display1").text(firstnum);
-		$("#debug-display2").text(op);
-		$("#debug-display3").text(num);
-
-		if (op === "+") {
-			num = (parseFloat(firstnum,10) + parseFloat(num,10)).toString(10);
+			$(total).text(dispAr.join(""));
 		}
-		else if (op === "-") {
-			num = (parseFloat(firstnum,10) - parseFloat(num,10)).toString(10);
-		}
-		else if (op === "*") {
-			num = (parseFloat(firstnum,10) * parseFloat(num,10)).toString(10);
-		}
-		else if (op === "/") {
-			num = (parseFloat(firstnum,10) / parseFloat(num,10)).toString(10);
-		}
-		
-		$("#debug-display4").text(num);
-		
-		$("#total").text((numround(num)).toString(10));
-		num = "";
-		dispAr = [];
-		numlimit();
-
-
-
-	})
+	});
 
 	$("#clear").click(function(){
-		$("#inline").text("");
+		$(total).text("0");
 		dispAr = [];
 		num = "";
-		$("#total").text("0");
-	})
+	});
 
-	var numlimit = function(){
-		if (num.length>9) {
-			$("#total").text("err");
-			dispAr = [];
-			num = "";
-		}
-	};
-
-	var numround = function(num){
-		if (num.length>9) {
-			return num.substr(0,9);
-		}
-		else {
-			return num;
-		}
-	};
-
+	$("#compute").click(function(){
+		num = math.eval(dispAr.join(""));
+		$(total).text(num);
+		num = "";
+		dispAr = [];
+	});
 });
